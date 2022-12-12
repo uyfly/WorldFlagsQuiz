@@ -75,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/design_default_color_primary"
+                android:enabled="false"
                 android:text="Start"
                 android:textColor="@color/white"
                 android:textSize="18sp" />

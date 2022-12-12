@@ -3,11 +3,14 @@ package com.example.worldflagsquiz
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
@@ -99,6 +102,8 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
                 R.drawable.default_option_border_bg
             )
         }
+
+        btnSubmit?.isEnabled = false
     }
 
     private fun selectedOptionView(tv: TextView, selectedOptionNum: Int) {
@@ -111,6 +116,8 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
             this,
             R.drawable.selected_option_border_bg
         )
+
+        btnSubmit?.isEnabled = true
     }
 
     override fun onClick(view: View?) {
@@ -201,5 +208,3 @@ class QuizQuestionsActivity : AppCompatActivity(), OnClickListener {
         }
     }
 }
-
-// TODO 선택 미응답 시 처리
